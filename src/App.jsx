@@ -9,7 +9,7 @@ const projects = [
     modalDescription: 'Advanced forecasting tool utilizing complex logic formulas and Power Query for automated cleansing. Reduced monthly financial reporting time by 15 hours.',
     image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2',
     repoLink: 'https://github.com/jash1910/SectionA_Group18_AirbnbNYCAnalysis',
-    extraLink: 'https://public.tableau.com/app/profile/jashvitha.omkaram/viz/BNBnycalmostfinal/Dashboard1?publish=yes',
+    extraLink: 'https://public.tableau.com/app/profile/jashvitha.omkaram/viz/BNBnycalmostfinal/Dashboard1',
     tags: ['python', 'pandas', 'data-analysis', 'visualization'],
     language: 'Tableau',
     langColor: '#f1e05a'
