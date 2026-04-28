@@ -9,6 +9,7 @@ const projects = [
     modalDescription: 'Advanced forecasting tool utilizing complex logic formulas and Power Query for automated cleansing. Reduced monthly financial reporting time by 15 hours.',
     image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2',
     repoLink: 'https://github.com/jash1910/SectionA_Group18_AirbnbNYCAnalysis',
+    extraLink: 'https://public.tableau.com/app/profile/jashvitha.omkaram/viz/BNBnycalmostfinal/Dashboard1?publish=yes',
     tags: ['python', 'pandas', 'data-analysis', 'visualization'],
     language: 'Tableau',
     langColor: '#f1e05a'
@@ -20,6 +21,7 @@ const projects = [
     modalDescription: 'Analyzed 5,600 employee records to evaluate AI’s impact on productivity and burnout. Identified optimal AI usage (5–12 hrs/week) that maximizes output while minimizing burnout and errors.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
     repoLink: 'https://github.com/nipun1803/Section-A_DVA_Group-13',
+    extraLink: 'https://docs.google.com/spreadsheets/d/1LxDcVKBmP-0q5tzLr0PtYl5XSNiZD8AKb3fH8VQkD7Q/edit?gid=248362412#gid=248362412',
     tags: ['excel', 'data-analysis'],
     language: 'Excel',
     langColor: '#1d6f42'
@@ -79,10 +81,33 @@ export default function App() {
             <div className="flex items-center justify-end gap-3 p-4 border-t border-[#30363d] bg-[#161b22]">
               <button 
                 onClick={() => setSelectedProject(null)}
-                className="px-4 py-2 text-sm font-medium text-[#c9d1d9] bg-[#21262d] border border-[#30363d] rounded-md hover:bg-[#30363d] hover:border-[#8b949e] transition-colors"
+                className="px-4 py-2 text-sm font-medium text-[#c9d1d9] bg-[#21262d] border border-[#30363d] rounded-md hover:bg-[#30363d] hover:border-[#8b949e] transition-colors gap-2"
               >
                 Cancel
               </button>
+
+              {selectedProject.extraLink && selectedProject.language === 'Excel' && (
+                <a 
+                  href={selectedProject.extraLink} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="px-4 py-2 text-sm font-medium text-white bg-[#107c41] border border-[#185c37] rounded-md hover:bg-[#0c592d] transition-colors"
+                >
+                  View in Excel
+                </a>
+              )}
+
+              {selectedProject.extraLink && selectedProject.language === 'Tableau' && (
+                <a 
+                  href={selectedProject.extraLink} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="px-4 py-2 text-sm font-medium text-white bg-[#2a68a5] border border-[#1b4b7a] rounded-md hover:bg-[#1f4e7d] transition-colors"
+                >
+                  View in Tableau
+                </a>
+              )}
+
               <a 
                 href={selectedProject.repoLink} 
                 target="_blank" 
