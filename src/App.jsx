@@ -25,6 +25,30 @@ const projects = [
     tags: ['excel', 'data-analysis'],
     language: 'Excel',
     langColor: '#1d6f42'
+  },
+  {
+    id: 3,
+    title: 'Workforce Health & Productivity Analysis',
+    description: 'Analyzed workforce data to study the impact of work hours, stress, and sleep on productivity, revealing that balanced workloads improve performance while high stress reduces efficiency.',
+    modalDescription: 'Analyzed workforce data to study the impact of work hours, stress, and sleep on productivity, revealing that balanced workloads improve performance while high stress reduces efficiency.',
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643',
+    repoLink: null, // No view repo link
+    extraLink: 'https://docs.google.com/spreadsheets/d/1Z_Mlb0_pjKVsOPjUjifyB-5M645f1LgeDzKMRBnCpRo/edit?gid=2028578202#gid=2028578202',
+    tags: ['excel', 'data-analysis', 'health', 'productivity'],
+    language: 'Excel',
+    langColor: '#1d6f42'
+  },
+  {
+    id: 4,
+    title: 'Privatization Trends & Economic Impact Analysis',
+    description: 'Analyzed privatization trends across sectors to evaluate their impact on economic performance and growth using data-driven insights.',
+    modalDescription: 'Analyzed privatization trends across sectors to evaluate their impact on economic performance and growth using data-driven insights.',
+    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e',
+    repoLink: null, // No view repo link
+    extraLink: 'https://docs.google.com/spreadsheets/d/19J_OKEFVKbNfUNfWvBRaQlC10Fj9OI-fdMh_vodFLb4/edit?gid=1606178643#gid=1606178643',
+    tags: ['excel', 'data-analysis', 'economics'],
+    language: 'Excel',
+    langColor: '#1d6f42'
   }
 ];
 
@@ -108,14 +132,16 @@ export default function App() {
                 </a>
               )}
 
-              <a 
-                href={selectedProject.repoLink} 
-                target="_blank" 
-                rel="noreferrer"
-                className="px-4 py-2 text-sm font-medium text-white bg-[#2da44e] border border-[#2ea043] rounded-md hover:bg-[#2c974b] transition-colors"
-              >
-                View Live Repository
-              </a>
+              {selectedProject.repoLink && (
+                <a 
+                  href={selectedProject.repoLink} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="px-4 py-2 text-sm font-medium text-white bg-[#2da44e] border border-[#2ea043] rounded-md hover:bg-[#2c974b] transition-colors"
+                >
+                  View Live Repository
+                </a>
+              )}
             </div>
           </div>
         </div>
